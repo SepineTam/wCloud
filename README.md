@@ -48,6 +48,6 @@ python main.py file font
 
 # Acknowledgements
 ## Chinese Font Provision
-Thanks to StellarCN [@StellarCN](https://github.com/StellarCN) for providing the font ```SimHei```. Wishing StellarCN continued success.
+Thanks to [@StellarCN](https://github.com/StellarCN) for providing the font ```SimHei```. Wishing StellarCN continued success.
 
-Thanks to Sociology and Political Science student [Esme](mailto:esme2004dash@163.com) from Shanghai University for the requirements, which inspired me to write this small tool.
+Thanks to Sociology and Political Science student [@Esme](mailto:esme2004dash@163.com) from Shanghai University for the requirements, which inspired me to write this small tool.
