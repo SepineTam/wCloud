@@ -25,9 +25,9 @@ def cut(content, stopwords=load_stopwords()):
     filtered_words = [word for word in words if word not in stopwords]
     return ' '.join(filtered_words)
 
-def gen_fig(text, cloudname='wordcloud'):
+def gen_fig(text, cloudname='wordcloud', font='SimHei.ttf'):
     wordcloud = WordCloud(
-        font_path='SimHei.ttf', width=800, height=400, background_color='white'
+        font_path=font, width=800, height=400, background_color='white'
         ).generate(text)
     cloudname = f'out/{cloudname}.png'
     plt.figure(figsize=(10, 5))
@@ -36,11 +36,16 @@ def gen_fig(text, cloudname='wordcloud'):
     plt.savefig(cloudname)
     # plt.show()  # 显示化
 
-def main(name):
+def main(name, *args):
     content = read_file(name)
+    if len(args) > 0:
+        font = args[0]
+    else:
+        font = 'SimHei.ttf'
     gen_fig(
         text = cut(content),
-        cloudname = name
+        cloudname = name,
+        font = font
     )
 
 if __name__ == "__main__":
@@ -49,6 +54,10 @@ if __name__ == "__main__":
         name = sys.argv[1]
         if '.txt' in name:
             name = name.split('.txt')[0]
+        if len(sys.argv) > 2:
+            font = sys.argv[2]
+            main(name, font)
+        else:
+            main(name)
     else:
-        name = "test"
-    main(name)
+        main("test")
