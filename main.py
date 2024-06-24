@@ -56,6 +56,8 @@ if __name__ == "__main__":
             name = name.split('.txt')[0]
         if len(sys.argv) > 2:
             font = sys.argv[2]
+            if '.ttf' not in font:
+                font = f"{font}.ttf"
             main(name, font)
         else:
             main(name)
