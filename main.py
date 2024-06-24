@@ -34,7 +34,7 @@ def gen_fig(text, cloudname='wordcloud'):
     plt.imshow(wordcloud, interpolation='bilinear')
     plt.axis("off")
     plt.savefig(cloudname)
-    # plt.show()
+    # plt.show()  # 显示化
 
 def main(name):
     content = read_file(name)
@@ -44,4 +44,11 @@ def main(name):
     )
 
 if __name__ == "__main__":
-    main('test')
+    import sys
+    if len(sys.argv) > 1:
+        name = sys.argv[1]
+        if '.txt' in name:
+            name = name.split('.txt')[0]
+    else:
+        name = "test"
+    main(name)
