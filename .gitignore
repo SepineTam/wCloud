@@ -9,3 +9,5 @@ venv
 
 !in/test.txt
 !out/test.png
+
+__pycache__
