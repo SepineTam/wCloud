@@ -5,6 +5,7 @@ venv
 *.txt
 
 .gitattributes
+.idea
 
 !in/test.txt
 !out/test.png
