@@ -1,2 +1,5 @@
 jieba
 wordcloud
+
+flask
+Flask-Cors
