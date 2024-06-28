@@ -13,6 +13,13 @@ from matplotlib import pyplot as plt
 from wCloud.utils import *
 
 def gen_fig(text_name, stopwords_path='stop.txt', font='SimHei.ttf'):
+    """
+    generate figure from a txt-file to a wordcloud figure
+    :param text_name: the text name
+    :param stopwords_path: stopwords path
+    :param font: font path
+    :return: gen-figure path
+    """
     name, in_name = reformat(text_name)
 
     in_path = f'in/{in_name}'
