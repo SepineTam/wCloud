@@ -5,21 +5,9 @@
 #
 # @Author : Sepine Tam
 # @Email  : sepinetam@gmail.com
-# @File   : utils.py
+# @File   : cut.py
 
 import jieba
-
-
-def load_stopwords(filepath='stop.txt'):
-    with open(filepath, 'r', encoding='utf-8') as f:
-        stopwords = {line.strip() for line in f if line.strip()}
-    return stopwords
-
-
-def read_file(file_path):
-    with open(file_path, 'r', encoding='utf-8') as f:
-        text = f.read()
-    return text
 
 
 def cut_text(text, stopwords):

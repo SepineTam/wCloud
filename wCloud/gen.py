@@ -12,11 +12,10 @@ from matplotlib import pyplot as plt
 
 from wCloud.utils import *
 
-
 def gen_fig(text_name, stopwords_path='stop.txt', font='SimHei.ttf'):
-    name, file_type = text_name.split('.')
+    name, in_name = reformat(text_name)
 
-    in_path = f'in/{text_name}'
+    in_path = f'in/{in_name}'
     out_path = f'out/{name}.png'
 
     text = read_file(in_path)
