@@ -7,9 +7,6 @@
 # @Email  : sepinetam@gmail.com
 # @File   : __init__.py
 
-from read import read_file
-from load import load_stopwords
-
+from load import load_stopwords, read_file
 from format import reformat
-
 from cut import cut_text

@@ -25,6 +25,12 @@ def load_type(filepath='type'):
     return type_list
 
 
+def read_file(file_path):
+    with open(file_path, 'r', encoding='utf-8') as f:
+        text = f.read()
+    return text
+
+
 if __name__ == '__main__':
     types = load_type()
     print(types)
