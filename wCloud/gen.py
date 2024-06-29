@@ -17,11 +17,12 @@ def gen_fig(text_name, stopwords_path='stop.txt', font='SimHei.ttf'):
     generate figure from a txt-file to a wordcloud figure
     :param text_name: the text name
     :param stopwords_path: stopwords path
-    :param font: font path
+    :param font: fonts path
     :return: gen-figure path
     """
     name, in_name = reformat(text_name)
 
+    font_path = f'fonts/{font}'
     in_path = f'in/{in_name}'
     out_path = f'out/{name}.png'
 
@@ -31,7 +32,7 @@ def gen_fig(text_name, stopwords_path='stop.txt', font='SimHei.ttf'):
     word = cut_text(text, stopwords)
 
     wordcloud = WordCloud(
-        font_path=font, width=800, height=500, background_color='white'
+        font_path=font_path, width=800, height=500, background_color='white'
     ).generate(word)
 
     plt.figure(figsize=plt.figaspect(0.5), facecolor='white')
