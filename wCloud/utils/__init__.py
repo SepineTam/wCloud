@@ -7,6 +7,6 @@
 # @Email  : sepinetam@gmail.com
 # @File   : __init__.py
 
-from load import load_stopwords, read_file
-from format import reformat
-from cut import cut_text
+from wCloud.utils.load import load_stopwords, read_file
+from wCloud.utils.format import reformat
+from wCloud.utils.cut import cut_text
