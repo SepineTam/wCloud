@@ -21,8 +21,9 @@ def gen_fig(text_name, stopwords_path='stop.txt', font='SimHei.ttf'):
     :return: gen-figure path
     """
     name, in_name = reformat(text_name)
+    _, fontname = reformat(font, "ttf")
 
-    font_path = f'fonts/{font}'
+    font_path = f'fonts/{fontname}'
     in_path = f'in/{in_name}'
     out_path = f'out/{name}.png'
 
