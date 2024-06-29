@@ -10,5 +10,7 @@
 from wCloud import generate
 
 out_path = generate(
-    text_name=(in_name := "test.txt")
+    text_name=(in_name := "test.txt"),
+    stopwords_path='stop.txt',
+    font='SimHei.ttf'
 )
