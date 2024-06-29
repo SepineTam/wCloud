@@ -24,27 +24,31 @@ pip install -r requirements.txt
 3. Run the script.
 
 ### Example Usage
-The example file is ```in/example.txt```.
+The example file is ```"in/example.txt"```.
 
-The returned file is ```out/example.png```.
+The stop file is ```"stop.txt"```
+
+The returned file is ```"out/example.png"```.
 
 Font selection is SimSun.
 
 ```bash
-python main.py example SimSun
+python main.py example stop SimSun
 ```
 
 ### Example Explanation
-- The input file is ```in/example.txt```.
-- The resulting word cloud image is ```out/example.png```.
-- The chosen font is ```SimSun.ttf``` in the root directory.
+- The input file is ```"in/example.txt"```
+- The stop file is ```"stop.txt"```
+- The resulting word cloud image is ```"out/example.png"```.
+- The chosen font is ```fonts/SimSun.ttf```.
 
 ### Parameter Explanation
 ```bash
-python main.py file font
+python main.py file stop font
 ```
-- Parameter 1 (file): The name of the input file (".txt" is optional). If not provided, the default is "test".
-- Parameter 2 (font): The font (".ttf" is optional). If not provided, the default is "SimHei".
+- Parameter 1 (file): The name of the input file (".txt" is optional). If not provided, the default is "test.txt".
+- Parameter 2 (stop): The stopwords file (".txt" is optional). If not provided, the default is "stop.txt"
+- Parameter 3 (font): The font (".ttf" is optional). If not provided, the default is "SimHei.ttf".
 
 # Acknowledgements
 ## Chinese Font Provision
